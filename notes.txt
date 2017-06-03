@@ -1,0 +1,19 @@
+# builds the dockerfile into an image
+docker build -t friendlyhello .
+			#-t tags the following into a name
+			    #Name of the image
+
+# Runs a built image
+docker run -p 4000:80 friendlyhello
+		  #-p signifies the binding of the ports
+		  	 #Your machine's port (4000) is mapped to the container's exposed port (80)
+		  	 		 #Name of the image
+
+## Running with -d allows the app to run in the background
+docker run -d -p 4000:80 friendlyhello
+## To exit, run
+docker ps
+## And take the container ID to run
+docker stop [container id]
+
+## Sharing the image details here: https://docs.docker.com/get-started/part2/#share-your-image
